@@ -7,3 +7,5 @@ The idea of this module is to process the files in CSV format and return a panda
 Wrap everything into a simple Flask server and enable a web service to answer it
 
 Since the volume of data shouldn't be much large (not so many votes a legislator would vote after all) I would create a S3 bucket and monitor any new upload of change in the csv files. This could be a very neaty AWS Lambda.
+
+zip -
