@@ -53,7 +53,7 @@ def get_oppose_count(legislator_name):
 # define a function that receives a bill and returns the number of legislators that supported it and the primary sponsor
 def get_bill_supporters(bill_title):
     supporters = merged_df[(merged_df['title'] == bill_title) & (merged_df['vote_type'] == 1)]
-    return supporters['name'].tolist(), supporters['sponsor_id'].tolist()[0]
+    return supporters['name'].tolist()
 
 # define a function that receives a bill and returns the number of legislators that opposed
 def get_bill_opposers(bill_title):
@@ -78,8 +78,8 @@ def main():
 
 #For every bill in the dataset, how many legislators supported the bill? How many legislators
 # opposed the bill? Who was the primary sponsor of the bill?
-  print("\nBill supporters\n", get_bill_supporters('H.R. 1: For the People Act of 2019'))
-  print("\nBill opposers\n", get_bill_opposers('H.R. 1: For the People Act of 2019'))
+  print("\nBill supporters\n", get_bill_supporters('H.R. 3684: Infrastructure Investment and Jobs Act'))
+  print("\nBill opposers\n", get_bill_opposers('H.R. 3684: Infrastructure Investment and Jobs Act'))
 
 
 
